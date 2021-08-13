@@ -7,6 +7,8 @@ namespace WeaponsTabReborn
 {
 	class Dialog_ManageLoadouts : Window
 	{
+		public ThingFilterUI.UIState uiState = new ThingFilterUI.UIState();
+
 		private Vector2 scrollPosition;
 
 		private Loadout selLoadoutInt;
@@ -119,8 +121,10 @@ namespace WeaponsTabReborn
 			{
 				GUI.BeginGroup(rect4);
 				DoNameInputRect(new Rect(0f, 0f, 200f, 30f), ref SelectedLoadout.label);
-				//ThingFilterUI.UIState = ThingFilterUI.UIState
-				ThingFilterUI.DoThingFilterConfigWindow(new Rect(0f, 40f, 300f, rect4.height - 45f - 10f), new ThingFilterUI.UIState(), SelectedLoadout.filter, weaponGlobalFilter, 16, null);
+				//ThingFilterUI.UIState test = new ThingFilterUI.UIState();
+				//uiState.scrollPosition = scrollPosition;
+
+                ThingFilterUI.DoThingFilterConfigWindow(new Rect(0f, 40f, 300f, rect4.height - 45f - 10f), uiState, SelectedLoadout.filter, weaponGlobalFilter, 16, null);
 				GUI.EndGroup();
 			}
 		}

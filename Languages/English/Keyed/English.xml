@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<SelectLoadout>Select Loadout</SelectLoadout>
+<NewLoadout>New Loadout</NewLoadout>
+<DeleteLoadout>Delete Loadout</DeleteLoadout>
+<NoLoadoutSelected>No Loadout Selected</NoLoadoutSelected>
+<Loadout>Loadout</Loadout>
+<LoadoutAnything>Anything</LoadoutAnything>
+<LoadoutPacifist>Pacifist</LoadoutPacifist>
+<ManageLoadouts>Manage Loadouts</ManageLoadouts>
+<LoadoutInUse>Loadout in use</LoadoutInUse>
+
+</LanguageData>

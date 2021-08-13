@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PawnColumnDef>
+    <defName>WeaponIcon</defName>
+    <workerClass>WeaponsTabReborn.PawnColumnWorker_WeaponIcon</workerClass>
+    <label>weapon</label>
+  </PawnColumnDef>
+  
+  <PawnColumnDef>
+    <defName>WeaponQuality</defName>
+    <workerClass>WeaponsTabReborn.PawnColumnWorker_WeaponQuality</workerClass>
+    <width>80</width>
+  </PawnColumnDef>
+  
+  <PawnColumnDef>
+    <defName>WeaponHealth</defName>
+    <workerClass>WeaponsTabReborn.PawnColumnWorker_WeaponHealth</workerClass>
+    <width>45</width>
+  </PawnColumnDef>
+  
+  <PawnColumnDef>
+    <defName>WeaponLoadout</defName>
+    <workerClass>WeaponsTabReborn.PawnColumnWorker_WeaponLoadout</workerClass>
+    <label>loadout</label>
+  </PawnColumnDef>
+
+  <PawnColumnDef>
+    <defName>UtilityIcon</defName>
+    <workerClass>WeaponsTabReborn.PawnColumnWorker_UtilityIcon</workerClass>
+    <label>utility</label>
+  </PawnColumnDef>
+  
+</Defs>

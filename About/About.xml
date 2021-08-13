@@ -6,7 +6,27 @@
 	<supportedVersions>
 		<li>1.3</li>
 	</supportedVersions>
-	<description>This mod adds  
+	<description>I picked this one up, and I intend to update it further.  I intend to add compatibility with Simple Sidearms.  
+	
+	Original:
+	https://steamcommunity.com/sharedfiles/filedetails/?id=2288470754
+	
+	<Original description>
+	## Weapons Tab
+- Adds a 'Weapons' tab to the bottom bar that lets you view what weapons each colonist has equipped
+- Lets you create weapon loadouts and assign each colonist a loadout
+- Colonists will automatically pick up weapons that are allowed in their current loadout (and drop thier weapon if it is not allowed)
+- If a colonist sees that a better quality of the same weapon is available, they will swap out for the better one
+
+## Fun fact
+- I made this mod because I was playing in a game with 100 colonists and was tired of manually assigning a weapon to each one
+
+## Requires
+- The Harmony workshop item is required for this mod to work: steam://url/CommunityFilePage/2009463077
+
+## Incompatibilities
+- Currently incompatible with Multiplayer, hope to fix that soon
+</Original description>
 	
 	Like my mod?  Donate at:
 	https://ko-fi.com/papercrane1001
@@ -14,7 +34,7 @@
 	I use the MIT license: https://opensource.org/licenses/MIT
 	which mostly says that if you use my code, please give me credit.  
 	
-	GitHub at: 
+	GitHub at: https://github.com/papercrane1001/-1001-WeaponsTabReborn
 	
 	\n\nVersion 1.0.0
 	\nFor version 1.3.</description>

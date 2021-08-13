@@ -58,9 +58,11 @@ namespace WeaponsTabReborn
 			for (int j = 0; j < list.Count; j++)
 			{
 				var weapon = list[j];
-				if (currentLoadout.filter.Allows(weapon) && weapon.IsInAnyStorage() && !weapon.IsForbidden(pawn) && !weapon.IsBurning())
+				if (currentLoadout.filter.Allows(weapon) && weapon.IsInAnyStorage() 
+					&& !weapon.IsForbidden(pawn) && !weapon.IsBurning())
 				{
-					if ((!EquipmentUtility.IsBiocoded(weapon) || EquipmentUtility.IsBiocodedFor(weapon, pawn)) && pawn.CanReserveAndReach(weapon, PathEndMode.OnCell, pawn.NormalMaxDanger()))
+					//SpecialThingFilterWorker_BiocodedWeapons.
+					if ((!CompBiocodable.IsBiocoded(weapon) || CompBiocodable.IsBiocodedFor(weapon, pawn)) && pawn.CanReserveAndReach(weapon, PathEndMode.OnCell, pawn.NormalMaxDanger()))
 					{
 						QualityCategory weaponQuality = QualityCategory.Awful;
 						weapon.TryGetQuality(out weaponQuality);

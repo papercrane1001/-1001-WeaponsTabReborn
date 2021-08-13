@@ -119,7 +119,8 @@ namespace WeaponsTabReborn
 			{
 				GUI.BeginGroup(rect4);
 				DoNameInputRect(new Rect(0f, 0f, 200f, 30f), ref SelectedLoadout.label);
-				ThingFilterUI.DoThingFilterConfigWindow(new Rect(0f, 40f, 300f, rect4.height - 45f - 10f), ref scrollPosition, SelectedLoadout.filter, weaponGlobalFilter, 16, null);
+				//ThingFilterUI.UIState = ThingFilterUI.UIState
+				ThingFilterUI.DoThingFilterConfigWindow(new Rect(0f, 40f, 300f, rect4.height - 45f - 10f), new ThingFilterUI.UIState(), SelectedLoadout.filter, weaponGlobalFilter, 16, null);
 				GUI.EndGroup();
 			}
 		}

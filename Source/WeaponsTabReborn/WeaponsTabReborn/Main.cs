@@ -20,5 +20,5 @@ namespace WeaponsTabReborn
             var harmony = new Harmony("com.papercrane1001.weaponstabreborn");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
-    }
+    }	
 }

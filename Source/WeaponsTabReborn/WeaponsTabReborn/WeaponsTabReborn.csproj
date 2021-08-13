@@ -51,10 +51,40 @@
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Dialog_ManageLoadouts.cs" />
+    <Compile Include="Game_Patches.cs" />
+    <Compile Include="JobDefOf.cs" />
+    <Compile Include="JobDriver_DropEquipmentNoForbid.cs" />
+    <Compile Include="JobGiver_EquipLoadout.cs" />
+    <Compile Include="Loadout.cs" />
+    <Compile Include="LoadoutDatabase.cs" />
+    <Compile Include="LoadoutDictionary.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="MainTabWindow_Weapons.cs" />
+    <Compile Include="PawnColumnWorker_UtilityIcon.cs" />
+    <Compile Include="PawnColumnWorker_WeaponHealth.cs" />
+    <Compile Include="PawnColumnWorker_WeaponIcon.cs" />
+    <Compile Include="PawnColumnWorker_WeaponLoadout.cs" />
+    <Compile Include="PawnColumnWorker_WeaponQuality.cs" />
+    <Compile Include="PawnTableDefOf.cs" />
+    <Compile Include="Pawn_ExposeData_Patch.cs" />
+    <Compile Include="Pawn_LoadoutTracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VariableReference.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dialog_ManageLoadouts.cs" />
+    <Compile Include="Dialog_ManageSubLoadouts.cs" />
     <Compile Include="Game_Patches.cs" />
     <Compile Include="JobDefOf.cs" />
     <Compile Include="JobDriver_DropEquipmentNoForbid.cs" />

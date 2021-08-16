@@ -75,6 +75,8 @@
     <Compile Include="JobDriver_DropEquipmentNoForbid.cs" />
     <Compile Include="JobGiver_EquipLoadout.cs" />
     <Compile Include="Loadout.cs" />
+    <Compile Include="SubLoadoutDictionary.cs" />
+    <Compile Include="SubLoadoutDatabase.cs" />
     <Compile Include="LoadoutDatabase.cs" />
     <Compile Include="LoadoutDictionary.cs" />
     <Compile Include="Main.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Pawn_ExposeData_Patch.cs" />
     <Compile Include="Pawn_LoadoutTracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubLoadout.cs" />
     <Compile Include="VariableReference.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -35,22 +35,6 @@ namespace WeaponsTabReborn
 
 		public AcceptanceReport TryDelete(SubLoadout subLoadout)
 		{
-			foreach (Pawn item in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive)
-			{
-				var subLoadouts = SubLoadoutDictionary.GetLoadoutTracker(item);
-				if (subLoadouts != null && subLoadouts.CurrentSubLoadout == subLoadout)
-				{
-					return new AcceptanceReport("LoadoutInUse".Translate(item));
-				}
-			}
-			foreach (Pawn item2 in PawnsFinder.AllMapsWorldAndTemporary_AliveOrDead)
-			{
-				var subLoadouts = SubLoadoutDictionary.GetLoadoutTracker(item2);
-				if (subLoadouts != null && subLoadouts.CurrentSubLoadout == subLoadout)
-				{
-					subLoadouts.CurrentLoadout = null;
-				}
-			}
 			subLoadouts.Remove(subLoadout);
 			return AcceptanceReport.WasAccepted;
 		}

@@ -18,40 +18,5 @@ namespace WeaponsTabReborn
             CurrentSubLoadoutDatabase = CurrentSubLoadoutDatabase ?? new SubLoadoutDatabase();
             return CurrentSubLoadoutDatabase;
         }
-
-        public static Pawn_LoadoutTracker GetLoadoutTracker(Pawn pawn)
-        {
-            if (!SubLoadoutRefsByPawn.ContainsKey(pawn) || SubLoadoutRefsByPawn.TryGetValue(pawn) == null)
-            {
-                var subLoadout = new Pawn_SubLoadoutTracker(pawn);
-                var newSubLoadoutRef = new VariableReference<Pawn_SubLoadoutTracker>(subLoadout);
-                SubLoadoutRefsByPawn.SetOrAdd(pawn, newSubLoadoutRef);
-                return subLoadout;
-            }
-
-            var subLoadoutRef = SubLoadoutRefsByPawn.TryGetValue(pawn);
-            if (subLoadoutRef.Get() == null)
-            {
-                var subLoadout = new Pawn_SubLoadoutTracker(pawn);
-                subLoadoutRef.Set(subLoadout);
-
-                return subLoadout;
-            }
-
-            return SubLoadoutRefsByPawn.TryGetValue(pawn).Get();
-        }
-
-        public static VariableReference<Pawn_LoadoutTracker> GetLoadoutTrackerRef(Pawn pawn)
-        {
-            if (!SubLoadoutRefsByPawn.ContainsKey(pawn) || SubLoadoutRefsByPawn.TryGetValue(pawn) == null)
-            {
-                var subLoadout = new Pawn_SubLoadoutTracker(pawn);
-                var loadoutRef = new VariableReference<Pawn_SubLoadoutTracker>(subLoadout);
-                SubLoadoutRefsByPawn.SetOrAdd(pawn, subLoadoutRef);
-                return subLoadoutRef;
-            }
-
-            return SubLoadoutRefsByPawn.TryGetValue(pawn);
-        }
     }
 }

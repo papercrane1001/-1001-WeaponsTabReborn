@@ -11,7 +11,7 @@ namespace WeaponsTabReborn
 
 		private Vector2 scrollPosition;
 
-		private Loadout selLoadoutInt;
+		private SubLoadout selSubLoadoutInt;
 
 		public const float TopAreaHeight = 40f;
 
@@ -21,30 +21,30 @@ namespace WeaponsTabReborn
 
 		private static ThingFilter weaponGlobalFilter;
 
-		private Loadout SelectedLoadout
+		private SubLoadout SelectedSubLoadout
 		{
 			get
 			{
-				return selLoadoutInt;
+				return selSubLoadoutInt;
 			}
 			set
 			{
 				CheckSelectedLoadoutHasName();
-				selLoadoutInt = value;
+				selSubLoadoutInt = value;
 			}
 		}
 
 		private void CheckSelectedLoadoutHasName()
 		{
-			if (SelectedLoadout != null && SelectedLoadout.label.NullOrEmpty())
+			if (SelectedSubLoadout != null && SelectedSubLoadout.label.NullOrEmpty())
 			{
-				SelectedLoadout.label = "Unnamed";
+				SelectedSubLoadout.label = "Unnamed";
 			}
 		}
 
 		public override Vector2 InitialSize => new Vector2(700f, 700f);
 
-		public Dialog_ManageSubLoadouts(Loadout selectedLoadout, ThingFilter subLoadout)
+		public Dialog_ManageSubLoadouts(SubLoadout selectedSubLoadout, ThingFilter subLoadout)
 		{
 			forcePause = true;
 			doCloseX = true;
@@ -56,7 +56,7 @@ namespace WeaponsTabReborn
 				weaponGlobalFilter = new ThingFilter();
 				weaponGlobalFilter.SetAllow(ThingCategoryDefOf.Weapons, allow: true);
 			}
-			SelectedLoadout = selectedLoadout;
+			SelectedSubLoadout = selectedSubLoadout;
 		}
 
 		public override void DoWindowContents(Rect inRect)
@@ -67,12 +67,12 @@ namespace WeaponsTabReborn
 			if (Widgets.ButtonText(rect, "SelectSubLoadout".Translate()))
 			{
 				List<FloatMenuOption> list = new List<FloatMenuOption>();
-				foreach (Loadout allLoadout in LoadoutDictionary.GetCurrentLoadoutDatabase().AllLoadouts)
+				foreach (SubLoadout allSubLoadout in SubLoadoutDictionary.GetCurrentSubLoadoutDatabase().AllSubLoadouts)
 				{
-					Loadout localOut = allLoadout;
+					SubLoadout localOut = allSubLoadout;
 					list.Add(new FloatMenuOption(localOut.label, delegate
 					{
-						SelectedLoadout = localOut;
+						SelectedSubLoadout = localOut;
 					}));
 				}
 				Find.WindowStack.Add(new FloatMenu(list));
@@ -82,7 +82,7 @@ namespace WeaponsTabReborn
 			num += 150f;
 			if (Widgets.ButtonText(rect2, "NewLoadout".Translate()))
 			{
-				SelectedLoadout = LoadoutDictionary.GetCurrentLoadoutDatabase().MakeNewLoadout();
+				SelectedSubLoadout = SubLoadoutDictionary.GetCurrentSubLoadoutDatabase().MakeNewSubLoadout();
 			}
 			num += 10f;
 			Rect rect3 = new Rect(num, 0f, 150f, 35f);
@@ -90,26 +90,26 @@ namespace WeaponsTabReborn
 			if (Widgets.ButtonText(rect3, "DeleteLoadout".Translate()))
 			{
 				List<FloatMenuOption> list2 = new List<FloatMenuOption>();
-				foreach (Loadout allLoadout2 in LoadoutDictionary.GetCurrentLoadoutDatabase().AllLoadouts)
+				foreach (SubLoadout allLoadout2 in SubLoadoutDictionary.GetCurrentSubLoadoutDatabase().AllSubLoadouts)
 				{
-					Loadout localOut2 = allLoadout2;
+					SubLoadout localOut2 = allLoadout2;
 					list2.Add(new FloatMenuOption(localOut2.label, delegate
 					{
-						AcceptanceReport acceptanceReport = LoadoutDictionary.GetCurrentLoadoutDatabase().TryDelete(localOut2);
+						AcceptanceReport acceptanceReport = SubLoadoutDictionary.GetCurrentSubLoadoutDatabase().TryDelete(localOut2);
 						if (!acceptanceReport.Accepted)
 						{
 							Messages.Message(acceptanceReport.Reason, MessageTypeDefOf.RejectInput, historical: false);
 						}
-						else if (localOut2 == SelectedLoadout)
+						else if (localOut2 == SelectedSubLoadout)
 						{
-							SelectedLoadout = null;
+							SelectedSubLoadout = null;
 						}
 					}));
 				}
 				Find.WindowStack.Add(new FloatMenu(list2));
 			}
 			Rect rect4 = new Rect(0f, 40f, inRect.width, inRect.height - 40f - CloseButSize.y).ContractedBy(10f);
-			if (SelectedLoadout == null)
+			if (SelectedSubLoadout == null)
 			{
 				GUI.color = Color.grey;
 				Text.Anchor = TextAnchor.MiddleCenter;
@@ -120,11 +120,11 @@ namespace WeaponsTabReborn
 			else
 			{
 				GUI.BeginGroup(rect4);
-				DoNameInputRect(new Rect(0f, 0f, 200f, 30f), ref SelectedLoadout.label);
+				DoNameInputRect(new Rect(0f, 0f, 200f, 30f), ref SelectedSubLoadout.label);
 				//ThingFilterUI.UIState test = new ThingFilterUI.UIState();
 				//uiState.scrollPosition = scrollPosition;
 
-				ThingFilterUI.DoThingFilterConfigWindow(new Rect(0f, 40f, 300f, rect4.height - 45f - 10f), uiState, SelectedLoadout.filter, weaponGlobalFilter, 16, null);
+				ThingFilterUI.DoThingFilterConfigWindow(new Rect(0f, 40f, 300f, rect4.height - 45f - 10f), uiState, SelectedSubLoadout.filter, weaponGlobalFilter, 16, null);
 				GUI.EndGroup();
 			}
 		}

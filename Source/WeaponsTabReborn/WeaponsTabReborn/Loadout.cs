@@ -15,7 +15,7 @@ namespace WeaponsTabReborn
     {
         public int uniqueID;
         public string label;
-        public ThingFilter filter = new ThingFilter();
+        //public ThingFilter filter = new ThingFilter();
         public List<ThingFilter> allFilters = new List<ThingFilter>(); 
         public List<ThingFilter> oneFilters = new List<ThingFilter>();
 
@@ -37,7 +37,7 @@ namespace WeaponsTabReborn
         {
             Scribe_Values.Look(ref uniqueID, "uniqueID", 0);
             Scribe_Values.Look(ref label, "label");
-            Scribe_Deep.Look(ref filter, "filter");
+            //Scribe_Deep.Look(ref filter, "filter");
             Scribe_Deep.Look(ref allFilters, "allFilters");
             Scribe_Deep.Look(ref oneFilters, "oneFilters");
         }

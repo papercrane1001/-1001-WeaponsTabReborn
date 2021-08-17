@@ -40,7 +40,7 @@ namespace WeaponsTabReborn
 
         public string GetUniqueLoadID()
         {
-            return "Loadout_" + label + uniqueID.ToString();
+            return "SubLoadout_" + label + uniqueID.ToString();
         }
     }
 }

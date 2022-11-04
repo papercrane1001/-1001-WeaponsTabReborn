@@ -5,3 +5,7 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[1001]WeaponsTabRebo
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[1001]WeaponsTabReborn\Source\WeaponsTabReborn\WeaponsTabReborn\Assemblies\0Harmony.xml
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[1001]WeaponsTabReborn\Source\WeaponsTabReborn\WeaponsTabReborn\obj\Debug\WeaponsTabReborn.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[1001]WeaponsTabReborn\Assemblies\WeaponsTabReborn.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\-1001-WeaponsTabReborn\Assemblies\WeaponsTabReborn.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\-1001-WeaponsTabReborn\Source\WeaponsTabReborn\WeaponsTabReborn\obj\Debug\WeaponsTabReborn.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\-1001-WeaponsTabReborn\Source\WeaponsTabReborn\WeaponsTabReborn\obj\Debug\WeaponsTabReborn.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\-1001-WeaponsTabReborn\Source\WeaponsTabReborn\WeaponsTabReborn\obj\Debug\WeaponsTabReborn.dll

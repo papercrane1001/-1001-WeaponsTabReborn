@@ -6,6 +6,6 @@
         <description>View Colonist Weapons and assign Loadouts</description>
         <tabWindowClass>WeaponsTabReborn.MainTabWindow_Weapons</tabWindowClass>
         <order>35</order>
-        <defaultHotKey></defaultHotKey>
+        <defaultHotKey>L</defaultHotKey>
     </MainButtonDef>
 </Defs>

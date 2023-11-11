@@ -53,5 +53,39 @@ namespace WeaponsTabReborn
 
             return LoadoutRefsByPawn.TryGetValue(pawn);
         }
+
+        //BPC INTEGRATION
+        public static void BPC_SetLoadoutId(Pawn pawn, int loadoutID)
+        {
+            var loadout = CurrentLoadoutDatabase.AllLoadouts.Find(x => x.uniqueID == loadoutID);
+            GetLoadoutTracker(pawn).CurrentLoadout = loadout;
+        }
+
+        public static int BPC_GetLoadoutId(Pawn pawn)
+        {
+            return GetLoadoutTracker(pawn).CurrentLoadout.uniqueID;
+        }
+
+        public static string BPC_GetLoadoutNamebyId(int loudoutId)
+        {
+            return CurrentLoadoutDatabase.AllLoadouts.First(x => x.uniqueID == loudoutId).label;
+        }
+
+        static Dictionary<string, int> BPC_CurrentLoadoutDatabase;
+        public static Dictionary<string, int> BPC_GetWeaponsLoadoutsDatabase()
+        {
+            BPC_CurrentLoadoutDatabase = BPC_CurrentLoadoutDatabase ?? new Dictionary<string, int>();
+
+            foreach (var entry in CurrentLoadoutDatabase.AllLoadouts)
+            {
+                BPC_CurrentLoadoutDatabase.AddDistinct(entry.label, entry.uniqueID);
+            }
+            return BPC_CurrentLoadoutDatabase;
+        }
+
+        public static int BPC_GetDefaultLoadoutId()
+        {
+            return CurrentLoadoutDatabase.DefaultLoadout().uniqueID;
+        }
     }
 }

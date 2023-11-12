@@ -1,0 +1,11 @@
+The way a Loadout works is it has a list of allowed weapons, and it picks the one with the best quality?
+
+First order of business: go by worth instead of quality?  Meta consideration is tricky.  
+
+
+
+SS Compat:
+Made complicated by the various settings in SS.  Could see it vbeing the case that a different configuration of loadouts is needed for each version of the settings for optimal functionality.
+Alternately, leave it to the user to optimize, and just try for basic functionality.  
+
+NewLoadout as List<oldLoadout>

@@ -2,7 +2,7 @@
 <Configuration>
   <Excluded>
     <exclude>.git</exclude>
-    <exclude>About\Preview.png~</exclude>
-    <exclude>Source</exclude>
+    <exclude>1.5\Source</exclude>
+    <exclude>1.6\Source</exclude>
   </Excluded>
 </Configuration>

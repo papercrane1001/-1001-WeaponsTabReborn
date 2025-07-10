@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeaponsTabReborn", "WeaponsTabReborn\WeaponsTabReborn.csproj", "{F57305F3-7DEA-4F0F-8AAA-1596C2EBE684}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F57305F3-7DEA-4F0F-8AAA-1596C2EBE684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57305F3-7DEA-4F0F-8AAA-1596C2EBE684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57305F3-7DEA-4F0F-8AAA-1596C2EBE684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57305F3-7DEA-4F0F-8AAA-1596C2EBE684}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {373B5A26-58D5-4AE8-B9F4-7A87A2D37E70}
+	EndGlobalSection
+EndGlobal
